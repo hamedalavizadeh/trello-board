@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: $radius-sm;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms ease, transform 120ms ease;
+  user-select: none;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba($color-accent, 0.6);
+    outline-offset: 2px;
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: inherit;
+
+  &:hover {
+    background: rgba(255,255,255,0.14);
+  }
+}
+
+.solid {
+  background: rgba(255,255,255,0.18);
+  color: inherit;
+
+  &:hover {
+    background: rgba(255,255,255,0.26);
+  }
+}
+
+.sm {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+
+.md {
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+}
