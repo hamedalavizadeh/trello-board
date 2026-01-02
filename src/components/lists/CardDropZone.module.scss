@@ -1,0 +1,15 @@
+.zone {
+  height: 44px;
+  border-radius: 10px;
+  margin-top: 8px;
+  background: transparent;
+}
+
+.over {
+  height: 44px;
+  border-radius: 10px;
+  margin-top: 8px;
+  background: rgba(0, 121, 191, 0.25);
+  outline: 2px dashed rgba(0, 121, 191, 0.4);
+  outline-offset: -2px;
+}

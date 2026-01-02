@@ -1,0 +1,82 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.column {
+  width: $list-width;
+  background: $color-list-bg;
+  border-radius: $radius-md;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 54px - 28px);
+  overflow: hidden;
+}
+
+.overlay {
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 8px;
+  gap: 8px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+  cursor: grab;
+  user-select: none;
+}
+
+.headerLeft:active {
+  cursor: grabbing;
+}
+
+.listTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: $color-text;
+  padding: 2px 6px;
+  border-radius: $radius-sm;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(0,0,0,0.06);
+  }
+}
+
+.listTitleInput {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.cardsArea {
+  @include scrollbar(10px);
+
+  padding: 0 10px 10px;
+  overflow: auto;
+  flex: 1;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+@media (max-width: 600px) {
+  .column {
+    width: min(84vw, 320px);
+  }
+}

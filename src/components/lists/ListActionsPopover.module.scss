@@ -1,0 +1,114 @@
+@use "variables" as *;
+
+.popover {
+  position: fixed;
+  width: 284px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  z-index: 60;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  padding: 8px 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.title {
+  font-weight: 800;
+  font-size: 14px;
+  color: rgba(0,0,0,0.72);
+  text-align: center;
+}
+
+.iconBtn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,0.58);
+
+  &:hover {
+    background: rgba(0,0,0,0.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba($color-accent, 0.55);
+    outline-offset: 2px;
+  }
+}
+
+.spacer {
+  width: 28px;
+  height: 28px;
+}
+
+.menu {
+  padding: 6px 0;
+}
+
+.menuItem {
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.74);
+  text-align: left;
+
+  &:hover {
+    background: rgba(12, 102, 228, 0.12);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba($color-accent, 0.55);
+    outline-offset: -2px;
+  }
+}
+
+.menuItemDanger {
+  &:hover {
+    background: rgba(235, 64, 52, 0.12);
+  }
+}
+
+.confirm {
+  padding: 12px 14px 14px;
+}
+
+.message {
+  font-size: 14px;
+  color: rgba(0,0,0,0.72);
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.dangerBtn {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #c9372c;
+  color: #fff;
+  font-weight: 800;
+
+  &:hover {
+    filter: brightness(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(201, 55, 44, 0.55);
+    outline-offset: 2px;
+  }
+}
