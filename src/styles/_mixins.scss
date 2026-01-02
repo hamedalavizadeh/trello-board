@@ -1,0 +1,31 @@
+@use "variables" as *;
+
+@mixin scrollbar($size: 10px) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.26);
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@mixin focusRing {
+  &:focus-visible {
+    outline: 2px solid rgba($color-accent, 0.6);
+    outline-offset: 2px;
+  }
+}
