@@ -107,17 +107,6 @@ export function useBoardDnd(data: NormalizedBoardData) {
       overListId = overMeta.listId;
       let nextIndex = overMeta.index;
 
-      const activeRect =
-        event.active.rect.current.translated ??
-        event.active.rect.current.initial;
-      const overRect = event.over.rect;
-
-      if (activeRect && overRect) {
-        const activeMidY = activeRect.top + activeRect.height / 2;
-        const overMidY = overRect.top + overRect.height / 2;
-        if (activeMidY > overMidY) nextIndex = overMeta.index + 1;
-      }
-
       overIndex = nextIndex;
     } else if (isListDropId(overId) || isListId(overId)) {
       overListId = stripPrefix(overId);
