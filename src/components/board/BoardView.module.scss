@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.boardArea {
+  @include scrollbar(10px);
+
+  height: calc(100vh - 54px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 14px 14px 18px;
+}
+
+.listsRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  height: 100%;
+  min-width: fit-content;
+}
+
+.addListSlot {
+  width: $list-width;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+  .addListSlot {
+    width: min(84vw, 320px);
+  }
+}
