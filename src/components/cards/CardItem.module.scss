@@ -1,0 +1,83 @@
+@use "variables" as *;
+
+.card {
+  background: #fff;
+  border-radius: 0.2rem;
+  padding: 6px 8px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  cursor: grab;
+  user-select: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.overlay {
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleBtn {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+  font-size: 14px;
+  color: $color-text;
+  font-weight: normal;
+  line-height: 1.25;
+  cursor: text;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.titleInput {
+  flex: 1;
+  min-width: 0;
+  border: 2px solid $color-accent;
+  border-radius: 4px;
+  padding: 6px 8px;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.25;
+  color: $color-text;
+  box-shadow: 0 0 0 3px rgba($color-accent, 0.18);
+}
+
+.commentContainer{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.commentBtn {
+  border: none;
+  cursor: pointer;
+  background:rgb(223, 225, 230);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(23, 43, 77);
+  line-height: 1.2;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.commentBtn:hover {
+  background: #cfd3da;
+}
+
+.commentBtn:focus-visible {
+  outline: 2px solid rgba($color-accent, 0.6);
+  outline-offset: 2px;
+}
