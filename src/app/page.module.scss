@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-board-bg;
+}
+
+.loading {
+  padding: 16px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+}
